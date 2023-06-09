@@ -28,11 +28,26 @@ function printEven() {
 
 //5. Print the total if you were to order one of every drink.
 function printTotal() {
-    let sum = 0;
+    //let sum = 0;
     // coffeeMenu.forEach((drink)=>{return sum += drink.price})
     // return sum
 
-    coffeeMenu.reduce(x, price) => x + price, sum
+    let sum = coffeeMenu.reduce((total, drink) => total + drink.price, 0);
+    return sum;
 }
 
-console.log(`The total price for one of each drink is: $${printTotal}`);
+//console.log(printTotal());
+
+//6. Print an array with all the drinks that are seasonal.
+function printSeasonal() {
+    return coffeeArray = coffeeMenu.filter((drink) => drink.seasonal);
+}
+
+//console.log(printSeasonal());
+
+//7. Print all the seasonal drinks with the words "with imported beans" after the item name. For example: "affogato with imported beans".
+function printBeans() {
+    coffeeMenu.map((drink) => console.log(drink.name + ' with imported beans'));
+}
+
+//printBeans();
