@@ -1,9 +1,16 @@
-function App() {
-  const [count, setCount] = useState(0)
+import { puppyList } from "./data.js"
+import { useState } from 'react'
 
+function App() {
+  const [puppies, setPuppies] = useState(puppyList)
+  console.log(useState(puppies))
   return (
     <>
-      <div>
+      <div {
+        puppies.map((puppy) => {
+          return <p>{puppy.name}</p>
+        })
+      }>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
